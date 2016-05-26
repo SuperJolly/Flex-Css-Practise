@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>align-items</title>
+	<style type="text/css">
+		h2 {
+			color: red;
+			font-family: monospace;
+		}
+		#container > div {
+		  display: flex;
+		  background:#000;
+		  justify-content: space-around;
+		  font-family: "Courier New", "Lucida Console", monospace;
+		}
+		#container.row > div {
+			flex-direction: row;
+			height: 200px;
+		}
+		#container.column > div {
+			flex-direction: column;
+			height: 300px;
+		}
+		#container > div > div {
+		  width: 50px;
+		  height: 50px;
+		  background: pink;
+		  border:1px solid #fff;
+		}
+		#flex-start {
+			align-items:flex-start;
+		}
+		#flex-end {
+			align-items:flex-end;
+		}
+		#center {
+			align-items:center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	  <h2>flex-direction:row</h2>
+		<div id="container" class="row">
+			<p>align-items: flex-start</p>
+			<div id="flex-start">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>align-items:center</p>
+			<div id="center">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>align-items:flex-end</p>
+			<div id="flex-end">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<h2>flex-direction:column</h2>
+		<div id="container" class="column">
+			<p>align-items: flex-start</p>
+			<div id="flex-start">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>align-items:center</p>
+			<div id="center">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>align-items:flex-end</p>
+			<div id="flex-end">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

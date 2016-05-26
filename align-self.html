@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>align-self</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		h2 {
+			font-family: monospace;
+			color: red;
+		}
+		#container {
+			display: inline-block;
+			width:49.5%;
+		}
+		#container > div {
+		  display: flex;
+		  align-items:flex-end; 
+		  height:200px;
+		  flex-direction:row;
+		  background:#000;
+		  font-family: "Courier New", "Lucida Console", monospace;
+		}
+		#container > div > div {
+		  width: 50px;
+		  height: 50px;
+		  background: pink;
+		  border:1px solid #fff;
+		}
+
+		#flex-start {
+		  justify-content: flex-start;
+		}
+
+		#flex-end {
+		  justify-content: flex-end;
+		}
+
+		#center {
+		  justify-content: center;
+		}
+
+		#space-between {
+		  justify-content: space-between;
+		}
+
+		#space-around {
+		  justify-content: space-around;
+		}
+		.alignSelf #flex-start > div{
+			align-self: flex-start;
+		}
+		.alignSelf #flex-end > div{
+			align-self: center;
+		}
+		.alignSelf #center > div{
+			align-self: flex-start;
+		}
+		.alignSelf #space-between > div{
+			align-self: center;
+		}
+		.alignSelf #space-around > div{
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h2>align-item代表一个容器内所有item所处的排列属性</h2>
+	  <p>align-items:flex-end,设置在#container > div上</p>
+	  <div id="flex-start">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-items:flex-end,设置在#container > div上</p>
+	  <div id="flex-end">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-items:flex-end,设置在#container > div上</p>
+	  <div id="center">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-items:flex-end,设置在#container > div上</p>
+	  <div id="space-between">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-items:flex-end,设置在#container > div上</p>
+	  <div id="space-around">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+	</div>
+
+
+
+	<div id="container" class="alignSelf">
+		<h2>align-self可以在某一个item上修改，会覆盖align-item值，仅改变自己而不改变其他item的排列属性</h2>
+	  <p>align-self:start设置在#container #flex-start > div上</p>
+	  <div id="flex-start">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-self:center设置在#container #flex-end > div上</p>
+	  <div id="flex-end">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-self:start设置在#container #flex-center > div上</p>
+	  <div id="center">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-self:end设置在#container #space-between > div上</p>
+	  <div id="space-between">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>align-self:start设置在#container #space-around > div上</p>
+	  <div id="space-around">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+	</div>
+</body>
+</html>

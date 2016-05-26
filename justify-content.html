@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>justify-content</title>
+	<style type="text/css">
+		#container > div {
+  display: flex;
+  height:200px;
+  background:#000;
+  font-family: "Courier New", "Lucida Console", monospace;
+	}
+
+	#container > div > div {
+	  width: 50px;
+	  height: 50px;
+	  background: pink;
+	  border:1px solid #fff;
+	}
+
+	#flex-start {
+	  justify-content: flex-start;
+	}
+
+	#center {
+	  justify-content: center;
+	}
+
+	#flex-end {
+	  justify-content: flex-end;
+	}
+
+	#space-between {
+	  justify-content: space-between;
+	}
+
+	#space-around {
+	  justify-content: space-around;
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+	  <p>justify-content: flex-start</p>
+	  <div id="flex-start">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>justify-content: flex-end</p>
+	  <div id="flex-end">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>justify-content: center</p>
+	  <div id="center">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>justify-content: space-between</p>
+	  <div id="space-between">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+
+	  <p>justify-content: space-around</p>
+	  <div id="space-around">
+	    <div></div>
+	    <div></div>
+	    <div></div>
+	  </div>
+	</div>
+</body>
+</html>
